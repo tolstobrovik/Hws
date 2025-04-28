@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head><title>{{ person.name }}</title></head>
+<body>
+    <h1>{{ person.name }}</h1>
+    <img src="{% static person.image %}" alt="BU yerda rasm bo'lishi kerak edi:)" width="200">
+    <p>Profession: {{ person.profession }}</p>
+    <p><strong>Short Info:</strong> {{ person.short_info }}</p>
+    <p><strong>Full Bio:</strong> {{ person.full_info }}</p>
+</body>
+</html>

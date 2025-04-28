@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <title>Famous People</title>
+</head>
+
+<body>
+    <h1>Famous People</h1>
+    <ul>
+        {% for person in people %}
+        <li>
+            <a href="{% url 'person_detail' person_id=forloop.counter %}">
+                <img src="{% static person.image %}" alt="Bu yerda rasm bo'lishi kerak edi:)" width="100">
+                <p>{{ person.name }}</p>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
